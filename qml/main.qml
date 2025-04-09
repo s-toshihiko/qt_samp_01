@@ -6,6 +6,8 @@ ApplicationWindow {
     visible: true
     width: 800
     height: 600
+	x: 0  // 画面左上に配置
+    y: 0
     title: "Qt GStreamer QML Sample"
 
     VideoItem {
