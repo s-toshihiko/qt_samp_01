@@ -1,0 +1,448 @@
+root@imx6qpsabresd:~# Application starting...
+Qt version: 6.5.0
+QT_QPA_PLATFORM= "wayland-egl"
+WAYLAND_DISPLAY= "wayland-0"
+Set AA_ShareOpenGLContexts attribute
+qt.qpa.plugin: init_platform called with pluginNamesWithArguments "wayland" platformPluginPath "" platformThemeName ""
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/plugins/platforms" ...
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/platforms/libqoffscreen.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("offscreen")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/platforms/libqwayland-egl.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/platforms/libqwayland-egl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland-egl"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandEglPlatformIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("wayland-egl")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/platforms/libqwayland-generic.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/platforms/libqwayland-generic.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("wayland")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/platforms/libqminimal.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("minimal")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/platforms/libqvnc.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("vnc")
+qt.core.plugin.factoryloader: checking directory path "/home/root/platforms" ...
+qt.qpa.plugin: Attempting to load Qt platform plugin "wayland" with arguments QList()
+qt.core.library: "/usr/lib/plugins/platforms/libqwayland-generic.so" loaded library
+qt.qpa.wayland: QT_WAYLAND_TEXT_INPUT_PROTOCOL= ""
+qt.qpa.plugin: Successfully loaded Qt platform plugin "wayland"
+qt.qpa.theme: Adding platform integration's theme names to list of theme names: QList("unknown", "generic")
+qt.qpa.theme: Attempting to create platform theme "unknown" via QPlatformThemeFactory::create
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/plugins/platformthemes" ...
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/platformthemes/libqxdgdesktopportal.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/platformthemes/libqxdgdesktopportal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "xdgdesktopportal",
+            "flatpak",
+            "snap"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QXdgDesktopPortalThemePlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("xdgdesktopportal", "flatpak", "snap")
+qt.core.plugin.factoryloader: checking directory path "/home/root/platformthemes" ...
+qt.qpa.theme: Attempting to create platform theme "generic" via QPlatformThemeFactory::create
+qt.qpa.theme: Attempting to create platform theme "unknown" via createPlatformTheme
+qt.qpa.theme: Attempting to create platform theme "generic" via createPlatformTheme
+qt.qpa.fonts: default fonts: system QFont(Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1) fixed QFont(monospace,9,-1,2,400,0,0,0,0,0,0,0,0,0,0,1)
+qt.qpa.theme: Successfully created platform theme "generic"
+qt.qpa.wayland: text input: register zwp_text_input_v1
+qt.qpa.wayland: using input method: QtWaylandClient::QWaylandInputContext
+qt.qpa.input.devices: register QPointingDevice("some touchscreen" TouchScreen id=200000000 ptrType=Finger maxPts=10)
+qt.qpa.wayland: using input method: QtWaylandClient::QWaylandInputContext
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/plugins/wayland-graphics-integration-client" ...
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandClientBufferIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland-egl"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandEglClientBufferPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("wayland-egl")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-graphics-integration-client/libshm-emulation-server.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-graphics-integration-client/libshm-emulation-server.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandServerBufferIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "shm-emulation-server"
+        ]
+    },
+    "archlevel": 0,
+    "className": "ShmServerBufferPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList()
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-graphics-integration-client/libdrm-egl-server.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-graphics-integration-client/libdrm-egl-server.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandServerBufferIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "drm-egl-server"
+        ]
+    },
+    "archlevel": 0,
+    "className": "DrmEglServerBufferPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList()
+qt.core.plugin.factoryloader: checking directory path "/home/root/wayland-graphics-integration-client" ...
+qt.qpa.wayland: Available client buffer integrations: QList("wayland-egl")
+qt.core.library: "/usr/lib/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so" loaded library
+qt.qpa.wayland: Using Wayland-EGL
+qt.qpa.wayland: Initializing client buffer integration "wayland-egl"
+QGuiApplication created
+Registered VideoItem type for QML
+Loading QML engine
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQml/WorkerScript/libworkerscriptplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 0,
+    "className": "QtQmlWorkerScriptPlugin",
+    "debug": false,
+    "uri": [
+        "QtQml.WorkerScript"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQml/WorkerScript/libworkerscriptplugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Controls/libqtquickcontrols2plugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 0,
+    "className": "QtQuickControls2Plugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Controls/libqtquickcontrols2plugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Controls/Fusion/libqtquickcontrols2fusionstyleplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 0,
+    "className": "QtQuickControls2FusionStylePlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls.Fusion"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Controls/Fusion/libqtquickcontrols2fusionstyleplugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 0,
+    "className": "QtQuickControls2BasicStylePlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls.Basic"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Controls/Basic/libqtquickcontrols2basicstyleplugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 0,
+    "className": "QtQuickControls2ImplPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls.impl"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Controls/impl/libqtquickcontrols2implplugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Window/libquickwindowplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 0,
+    "className": "QtQuick_WindowPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Window"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Window/libquickwindowplugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Templates/libqtquicktemplates2plugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 0,
+    "className": "QtQuickTemplates2Plugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Templates"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Templates/libqtquicktemplates2plugin.so" loaded library
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qml/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 0,
+    "className": "QtQuickControls2FusionStyleImplPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Controls.Fusion.impl"
+    ],
+    "version": 394496
+}
+
+
+qt.core.library: "/usr/lib/qml/QtQuick/Controls/Fusion/impl/libqtquickcontrols2fusionstyleimplplugin.so" loaded library
+VideoItem constructor called
+Creating new GStreamerGrabber
+Creating pipeline: "imxv4l2src device=/dev/video0 ! imxvideoconvert ! video/x-raw, format=UYVY, width=1280, height=720 ! videoconvert ! video/x-raw, format=RGBA ! appsink name=appsink sync=false max-buffers=1 drop=true"
+====== IMXV4L2SRC: 4.8.2 build on Oct 10 2023 02:31:27. ======
+Pipeline created successfully
+0:00:01.638132322  6172 0x71003ec0 INFO              imxv4l2src gstimxv4l2src.c:94:gst_imx_v4l2src_start:<imxv4l2src0> open device: /dev/video0
+Pipeline state change result: 2
+0:00:01.796952975  6172  0x2267418 INFO              imxv4l2src gstimxv4l2src.c:169:gst_imx_v4l2src_get_device_caps:<imxv4l2src0> probed caps: video/x-raw, format=(string){ I420, NV12, YUY2, UYVY }, width=(int)1280, height=(int)720, framerate=(fraction)30/1, interlace-mode=(string)interleaved
+0:00:01.797282641  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:266:gst_imx_v4l2src_set_caps:<imxv4l2src0> set caps video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, framerate=(fraction)30/1, interlace-mode=(string)interleaved
+0:00:01.797341974  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:239:gst_imx_v4l2src_reset:<imxv4l2src0> gstbuffer_in_v4l2 list free
+
+0:00:01.797510640  6172  0x2267418 INFO              imxv4l2src gstimxv4l2src.c:492:gst_imx_v4l2src_decide_allocation:<imxv4l2src0> using v4l2 source allocator.
+
+0:00:01.797784638  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:511:gst_imx_v4l2src_decide_allocation:<imxv4l2src0> no pool, making new pool
+0:00:01.798290970  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:396:gst_imx_v4l2_allocator_cb:<imxv4l2src0> need allocate 6 buffers.
+
+0:00:01.798368969  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:365:gst_imx_v4l2src_config:<imxv4l2src0> padding: (0,0), (0, 0)
+0:00:01.925175426  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:664:gst_imx_v4l2src_acquire_buffer:<imxv4l2src0> field type: 0
+
+0:00:01.925399425  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:710:gst_imx_v4l2src_create:<imxv4l2src0> base_time: 1:31:47.090359016 abs_time: 1:31:47.223348113
+0:00:01.925542092  6172  0x2267418 DEBUG             imxv4l2src gstimxv4l2src.c:754:gst_imx_v4l2src_create:<imxv4l2src0> timestamp: 0:00:00.099655764 duration: 0:00:00.033333333
+Pipeline current state: 3  (return code: 0 )
+GStreamerGrabber initialized successfully
+Creating pipeline: "imxv4l2src device=/dev/video0 ! imxvideoconvert ! video/x-raw, format=UYVY, width=1280, height=720 ! videoconvert ! video/x-raw, format=RGBA ! appsink name=appsink sync=false max-buffers=1 drop=true"
+====== IMXV4L2SRC: 4.8.2 build on Oct 10 2023 02:31:27. ======
+Pipeline created successfully
+0:00:01.939845030  6172 0x71003ec0 INFO              imxv4l2src gstimxv4l2src.c:94:gst_imx_v4l2src_start:<imxv4l2src1> open device: /dev/video0
+Pipeline state change result: 2
+0:00:01.942885351  6172  0x2267450 INFO              imxv4l2src gstimxv4l2src.c:169:gst_imx_v4l2src_get_device_caps:<imxv4l2src1> probed caps: video/x-raw, format=(string){ I420, NV12, YUY2, UYVY }, width=(int)1280, height=(int)720, framerate=(fraction)30/1, interlace-mode=(string)interleaved
+0:00:01.943136683  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:266:gst_imx_v4l2src_set_caps:<imxv4l2src1> set caps video/x-raw, format=(string)I420, width=(int)1280, height=(int)720, framerate=(fraction)30/1, interlace-mode=(string)interleaved
+0:00:01.943199683  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:239:gst_imx_v4l2src_reset:<imxv4l2src1> gstbuffer_in_v4l2 list free
+
+0:00:01.943336015  6172  0x2267450 INFO              imxv4l2src gstimxv4l2src.c:492:gst_imx_v4l2src_decide_allocation:<imxv4l2src1> using v4l2 source allocator.
+
+0:00:01.943504015  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:511:gst_imx_v4l2src_decide_allocation:<imxv4l2src1> no pool, making new pool
+0:00:01.943916013  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:396:gst_imx_v4l2_allocator_cb:<imxv4l2src1> need allocate 6 buffers.
+
+0:00:01.944032346  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:365:gst_imx_v4l2src_config:<imxv4l2src1> padding: (0,0), (0, 0)
+0:00:02.546525766  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:664:gst_imx_v4l2src_acquire_buffer:<imxv4l2src1> field type: 0
+
+0:00:02.546806431  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:710:gst_imx_v4l2src_create:<imxv4l2src1> base_time: 1:31:47.238704381 abs_time: 1:31:47.844753119
+0:00:02.546962764  6172  0x2267450 DEBUG             imxv4l2src gstimxv4l2src.c:754:gst_imx_v4l2src_create:<imxv4l2src1> timestamp: 0:00:00.572715405 duration: 0:00:00.033333333
+Pipeline current state: 3  (return code: 0 )
+GStreamerGrabber started successfully
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/plugins/wayland-shell-integration" ...
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-shell-integration/libwl-shell-plugin.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-shell-integration/libwl-shell-plugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandShellIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wl-shell"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandWlShellIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("wl-shell")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-shell-integration/libqt-shell.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-shell-integration/libqt-shell.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandShellIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "qt-shell"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandQtShellIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("qt-shell")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-shell-integration/libivi-shell.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-shell-integration/libivi-shell.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandShellIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "ivi-shell"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandIviShellIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("ivi-shell")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-shell-integration/libxdg-shell.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-shell-integration/libxdg-shell.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandShellIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "xdg-shell"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandXdgShellIntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("xdg-shell")
+qt.core.plugin.factoryloader: looking at "/usr/lib/plugins/wayland-shell-integration/libfullscreen-shell-v1.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/plugins/wayland-shell-integration/libfullscreen-shell-v1.so, metadata=
+{
+    "IID": "org.qt-project.Qt.WaylandClient.QWaylandShellIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "fullscreen-shell-v1"
+        ]
+    },
+    "archlevel": 0,
+    "className": "QWaylandFullScreenShellV1IntegrationPlugin",
+    "debug": false,
+    "version": 394496
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("fullscreen-shell-v1")
+qt.core.plugin.factoryloader: checking directory path "/home/root/wayland-shell-integration" ...
+qt.core.library: "/usr/lib/plugins/wayland-shell-integration/libwl-shell-plugin.so" loaded library
+qt.qpa.wayland: Couldn't find global wl_shell
+qt.qpa.wayland: Loading shell integration failed.
+qt.qpa.wayland: Attempted to load the following shells QList("wl-shell")
+QML loaded successfully, starting event loop
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/plugins/accessiblebridge" ...
+qt.core.plugin.factoryloader: checking directory path "/home/root/accessiblebridge" ...
+qt.qpa.input.devices: no mouse-like devices registered for seat "" The platform plugin should have provided one via QWindowSystemInterface::registerInputDevice(). Creating a default mouse for now.
+VideoItem::createRenderer called
+Initializing OpenGL
+VideoRenderer::render() called ( 0 )
+Null frame received
+qt.qpa.wayland.backingstore: handleUpdate QSGRenderThread(0x1e94740)
+qt.qpa.wayland.backingstore: Didn't receive frame callback in time, window should now be inexposed
+
+root@imx6qpsabresd:~#
