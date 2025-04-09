@@ -4,6 +4,7 @@
 #include <QQuickFramebufferObject>
 #include <QOpenGLShaderProgram>
 #include <QOpenGLFunctions>
+#include <QTime>  // QTime クラスを使うためのインクルード
 #include "GStreamerGrabber.h"
 
 class VideoRenderer : public QQuickFramebufferObject::Renderer, protected QOpenGLFunctions

@@ -1,6 +1,7 @@
 #include "VideoRenderer.h"
 #include <QOpenGLContext>
 #include <QImage>
+#include <QTime>  // QTime クラスを使うためのインクルード
 
 VideoRenderer::VideoRenderer(GStreamerGrabber* grabber)
     : grabber(grabber)
@@ -95,17 +96,43 @@ void VideoRenderer::initGL()
 
 void VideoRenderer::render()
 {
-    if (!glInitialized)
+    if (!glInitialized) {
+        qDebug() << "Initializing OpenGL";
         initGL();
+    }
 
-	qDebug() << "VideoRenderer::render() called";
+    static int renderCount = 0;
+    // 10回ごとにデバッグ出力
+    bool debugThisFrame = (renderCount % 10 == 0);
+    
+    if (debugThisFrame) {
+        qDebug() << "VideoRenderer::render() called (" << renderCount << ")";
+    }
 
     QImage frame = grabber->getCurrentFrame();
-    if (frame.isNull()) return;
+    if (frame.isNull()) {
+        if (debugThisFrame) {
+            qWarning() << "Null frame received";
+        }
+        return;
+    }
+    
+    if (debugThisFrame) {
+        qDebug() << "Frame received for rendering:" << frame.width() << "x" << frame.height()
+                 << "Format:" << frame.format();
+    }
 
+    glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, textureId);
+    
     QImage glImage = frame.convertToFormat(QImage::Format_RGBA8888);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, glImage.width(), glImage.height(), 0, GL_RGBA, GL_UNSIGNED_BYTE, glImage.bits());
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, glImage.width(), glImage.height(), 
+                0, GL_RGBA, GL_UNSIGNED_BYTE, glImage.bits());
+    
+    GLenum err = glGetError();
+    if (err != GL_NO_ERROR && debugThisFrame) {
+        qWarning() << "OpenGL error after texture update:" << err;
+    }
 
     glClearColor(0, 0, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT);
@@ -114,6 +141,28 @@ void VideoRenderer::render()
     glBindVertexArray(vao);
     shaderProgram.setUniformValue("texture", 0);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+    
+    err = glGetError();
+    if (err != GL_NO_ERROR && debugThisFrame) {
+        qWarning() << "OpenGL error after drawing:" << err;
+    }
+    
     glBindVertexArray(0);
     shaderProgram.release();
+    
+    renderCount++;
+    
+    // フレームレート確認（約5秒ごと）
+    static QTime frameTime = QTime::currentTime();
+    static int frameCounter = 0;
+    
+    frameCounter++;
+    QTime currentTime = QTime::currentTime();
+    int elapsed = frameTime.msecsTo(currentTime);
+    
+    if (elapsed > 5000) {  // 5秒ごとにフレームレート表示
+        qDebug() << "Rendering at" << (frameCounter * 1000.0 / elapsed) << "FPS";
+        frameTime = currentTime;
+        frameCounter = 0;
+    }
 }
