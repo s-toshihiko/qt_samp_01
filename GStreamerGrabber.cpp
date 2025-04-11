@@ -30,7 +30,7 @@ bool GStreamerGrabber::init()
     QString pipelineStr = QStringLiteral(
         "imxv4l2src device=/dev/video0 ! "
         "video/x-raw, format=I420, width=1280, height=720 ! "
-        "videoconvert ! "
+        "imxvideoconvert_g2d  ! "
         "video/x-raw, format=RGBA, width=1280, height=720 ! "
         "appsink name=appsink sync=false max-buffers=1 drop=true"
     );
